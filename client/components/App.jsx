@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-// import AddGroceries from './AddGroceries.jsx';
 import CurrentList from './CurrentList.jsx';
-// import Axios from 'axios';
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +20,7 @@ class App extends Component {
     event.preventDefault();
     this.setState({
       items: [...this.state.items, this.state.word]
-    })
+    });
   }
 
   render() {
