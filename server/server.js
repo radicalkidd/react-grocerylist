@@ -10,13 +10,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname +'/../client/dist'));
 app.use(cors())
 
-axios.get('/',)
-  .then(response => {
-    //handle success
-    console.log(response);
-  })
-  .catch(error => {
-    console.log(error)
-  })
+// axios.get('/',)
+//   .then(response => {
+//     //handle success
+//     console.log(response);
+//   })
+//   .catch(error => {
+//     console.log(error)
+//   })
+
 
 app.listen(port, () => console.log(`Grocerylist App is listening on port ${port}!`));

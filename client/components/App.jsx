@@ -1,51 +1,40 @@
 import React, { Component } from 'react';
-import AddGroceries from './AddGroceries.jsx';
+// import AddGroceries from './AddGroceries.jsx';
 import CurrentList from './CurrentList.jsx';
+// import Axios from 'axios';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      groceries : [
-        {name: 'ham', qty: 1},
-        {name: 'cheese', qty: 1},
-        {name: 'bread', qty: 1 },
-        {name: 'tomatoes', qty: 2}
-      ]
+      word: '',
+      items: []
     }
+    this.onChange = this.onChange.bind(this);
     this.submitHandler = this.submitHandler.bind(this);
   }
+  
+  onChange(event) {
+    this.setState({ word: event.target.value });
+  }
 
-  // componentDidMount() {
-  //   $.ajax({
-  //     url: 'http://localhost:3000/',
-  //     method: 'GET',
-  //     success: (data) => {
-  //       this.setState({
-  //         groceries: data
-  //       });
-  //     }
-  //   });
-  // }
-
-  submitHandler(name, quantity) {
-    console.log(name, quantity);
-    let copyState = this.state.groceries.slice();
-
-    copyState.push({name:name, qty:quantity});
-
-    // this.setState(
-    //   {groceries: copyState}
-    // );
+  submitHandler(event) {
+    event.preventDefault();
+    this.setState({
+      items: [...this.state.items, this.state.word]
+    })
   }
 
   render() {
-    const { groceries } = this.state;
     return (
       <div>
         <h1>Todays Groceries</h1>
-        <AddGroceries submitHandler={this.submitHandler}/>
-        <CurrentList groceries={groceries}/>
+        {/* <AddGroceries submitHandler={this.submitHandler}/> */}
+        <form className="App" onSubmit={this.submitHandler}>
+          <input value={this.state.word} onChange={this.onChange} />
+          <button>Add</button>
+        </form>
+        <CurrentList items={this.state.items}/>
       </div>
     );
   }
