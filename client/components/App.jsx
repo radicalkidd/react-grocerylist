@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CurrentList from './CurrentList.jsx';
+import GroceryTitle from './GroceryTitle.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -17,8 +18,10 @@ class App extends Component {
   }
 
   submitHandler(event) {
+    //The preventDefault() method stops the default action of an element from happening.
     event.preventDefault();
     this.setState({
+      word: '',
       items: [...this.state.items, this.state.word]
     });
   }
@@ -26,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Todays Groceries</h1>
+        <GroceryTitle />
         {/* <AddGroceries submitHandler={this.submitHandler}/> */}
         <form className="App" onSubmit={this.submitHandler}>
           <input value={this.state.word} onChange={this.onChange} />
