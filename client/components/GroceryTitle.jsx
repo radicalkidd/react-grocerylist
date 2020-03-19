@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Title = styled.h1 `
   font-size: 2em;
-  color: salmon;
+  color: #d63447;
   display: flex;
   justify-content: center;
 `

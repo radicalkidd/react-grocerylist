@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import styling from '.././styling/style.css';
 import CurrentList from './CurrentList.jsx';
 import GroceryTitle from './GroceryTitle.jsx';
+
+const Wrapper = styled.section`
+  display: flex;
+  justify-content: center;
+`
 
 class App extends Component {
   constructor(props) {
@@ -30,11 +37,12 @@ class App extends Component {
     return (
       <div>
         <GroceryTitle />
-        {/* <AddGroceries submitHandler={this.submitHandler}/> */}
+        <Wrapper>
         <form className="App" onSubmit={this.submitHandler}>
           <input value={this.state.word} onChange={this.onChange} />
           <button>Add</button>
         </form>
+        </Wrapper>
         <CurrentList items={this.state.items}/>
       </div>
     );
