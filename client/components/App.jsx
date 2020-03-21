@@ -9,6 +9,7 @@ const Wrapper = styled.section`
   justify-content: center;
 `
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -40,7 +41,7 @@ class App extends Component {
         <Wrapper>
         <form className="App" onSubmit={this.submitHandler}>
           <input value={this.state.word} onChange={this.onChange} />
-          <button>Add</button>
+          <button className="addButton">Add Item</button>
         </form>
         </Wrapper>
         <CurrentList items={this.state.items}/>
