@@ -2,6 +2,7 @@ html {
   background-color: #f8dc88;
 }
 
+
 .addButton {
 	box-shadow:inset 0px 1px 0px 0px #f5978e;
 	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
@@ -25,5 +26,54 @@ html {
 .addButton:active {
 	position:relative;
 	top:1px;
+}
+
+.form-group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form-field {
+  font-family: inherit;
+  width: 50%;
+  border: 0;
+  border-bottom: 2px solid #b80d57;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #084177;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.1s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+
+.form-field:focus {
+  padding-bottom: 5px;  
+  font-weight: 600;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #b80d57,#fff);
+  border-image-slice: 1;
+}
+
+.form-field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+body {
+  font-family: 'Poppins', sans-serif; 
+  min-height: 100vh;
+  font-size: 1.5rem;
 }
 
