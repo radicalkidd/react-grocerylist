@@ -1,5 +1,5 @@
 html {
-  background-color: #f8dc88;
+  background-color: #fff;
 }
 
 
@@ -47,17 +47,13 @@ html {
   background: transparent;
   transition: border-color 0.1s;
 
-  &::placeholder {
-    color: transparent;
-  }
-
-  &:placeholder-shown ~ .form__label {
-    font-size: 1.3rem;
-    cursor: text;
-    top: 20px;
-  }
 }
 
+.form-label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
 
 .form-field:focus {
   padding-bottom: 5px;  
@@ -68,10 +64,15 @@ html {
 }
 
 .form-field{
-  &:required,&:invalid { box-shadow:none; }
+  box-shadow:none; 
 }
 
 body {
+  background-image: url("../dist/images/sticky.jpg");
+  background-repeat: no-repeat;
+  background-size: 20em 20em;
+  background-position: center;
+  background-position-y: 150px;
   font-family: 'Poppins', sans-serif; 
   min-height: 100vh;
   font-size: 1.5rem;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import styling from '.././styling/style.css';
 import CurrentList from './CurrentList.jsx';
 import GroceryTitle from './GroceryTitle.jsx';
+import sticky from '../dist/images/sticky.jpg';
 
 const Wrapper = styled.section`
   display: flex;
@@ -10,17 +11,13 @@ const Wrapper = styled.section`
   padding-left: 15%;
   padding-bottom: 1%;
 `
-const Box = styled.section`
+const Box = styled.div`
   position: fixed;
-  top: 30%;
-  left: 45%;
+  top: 50%;
+  left: 50%;
   margin-top: -70px;
   margin-left: -190px;
-  height: 200px;
-  width: 200px;
-  background-color: rgba(33, 33, 33, .3);
 `
-
 
 class App extends Component {
   constructor(props) {
