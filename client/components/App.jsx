@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import styling from '.././styling/style.css';
 import CurrentList from './CurrentList.jsx';
 import GroceryTitle from './GroceryTitle.jsx';
-import sticky from '../dist/images/sticky.jpg';
 
 const Wrapper = styled.section`
   display: flex;
@@ -50,7 +48,6 @@ class App extends Component {
         <Wrapper>
         <form className="form-group field" onSubmit={this.submitHandler}>
           <input className="form-field" placeholder="item" value={this.state.word} onChange={this.onChange} />
-          {/* <label className="form-label">Name</label> */}
           <button className="addButton">Add Item</button>
         </form>
         </Wrapper>

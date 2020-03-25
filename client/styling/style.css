@@ -2,6 +2,17 @@ html {
   background-color: #fff;
 }
 
+body {
+  background-image: url("../dist/images/sticky.jpg");
+  background-repeat: no-repeat;
+  background-size: 20em 20em;
+  background-position: center;
+  background-position-y: 150px;
+  font-family: 'Poppins', sans-serif; 
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+
 
 .addButton {
 	box-shadow:inset 0px 1px 0px 0px #f5978e;
@@ -67,14 +78,4 @@ html {
   box-shadow:none; 
 }
 
-body {
-  background-image: url("../dist/images/sticky.jpg");
-  background-repeat: no-repeat;
-  background-size: 20em 20em;
-  background-position: center;
-  background-position-y: 150px;
-  font-family: 'Poppins', sans-serif; 
-  min-height: 100vh;
-  font-size: 1.5rem;
-}
 
