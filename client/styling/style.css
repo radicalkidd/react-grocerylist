@@ -1,9 +1,9 @@
 html {
-  background-color: #fff;
+  background-color: #4f98ca;
 }
 
 body {
-  background-image: url("../dist/images/sticky.jpg");
+  /* background-image: url("../dist/images/sticky.jpg"); */
   background-repeat: no-repeat;
   background-size: 20em 20em;
   background-position: center;
@@ -11,6 +11,15 @@ body {
   font-family: 'Poppins', sans-serif; 
   min-height: 100vh;
   font-size: 1.5rem;
+}
+
+div {
+	margin: 1% auto;
+	padding: 20px 0;
+	width: 600px;
+	text-align: center;
+	border-radius: 15px;
+	background: #f2ed6f;
 }
 
 
@@ -43,7 +52,7 @@ body {
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
-  width: 50%;
+  width: 60%;
 }
 
 .form-field {

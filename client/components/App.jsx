@@ -9,13 +9,6 @@ const Wrapper = styled.section`
   padding-left: 15%;
   padding-bottom: 1%;
 `
-const Box = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -70px;
-  margin-left: -190px;
-`
 
 class App extends Component {
   constructor(props) {
@@ -51,9 +44,7 @@ class App extends Component {
           <button className="addButton">Add Item</button>
         </form>
         </Wrapper>
-        <Box>
         <CurrentList items={this.state.items}/>
-        </Box>
       </div>
     );
   }
